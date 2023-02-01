@@ -1,9 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/services.dart';
 
-void main() {
+import 'firebase_options.dart';
+import 'Auth/main_page.dart';
+
+
+
+
+
+
+
+
+Future<void> main() async {
   
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
+
+final darkTheme = ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Color(0xffd688b0),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+);
+
+final lightTheme = ThemeData(
+  brightness: Brightness.light,
+  visualDensity: VisualDensity.adaptivePlatformDensity,
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -11,6 +36,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -114,5 +140,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+=======
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+    
+    
+        return MaterialApp(
+          theme: lightTheme,
+          home: MainPage(),
+        );
+    
+   
+>>>>>>> c3c5a7d2e7a042347fccb494759651522e75231f
   }
 }

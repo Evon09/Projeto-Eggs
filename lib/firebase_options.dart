@@ -36,7 +36,7 @@ class DefaultFirebaseOptions {
         );
     }
   }
-
+  
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyBqSLhJ2IUbAejHpTAob3YMe7lqbfPZfHw',
     appId: '1:266173993687:web:ebbb57d623f5b75303d692',
