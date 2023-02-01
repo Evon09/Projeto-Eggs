@@ -1,6 +1,6 @@
 {
-    "name": "projetoeggs",
-    "short_name": "projetoeggs",
+    "name": "desktopeggs",
+    "short_name": "desktopeggs",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

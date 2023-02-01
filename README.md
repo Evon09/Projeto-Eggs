@@ -1,4 +1,4 @@
-# projetoeggs
+# desktopeggs
 
 A new Flutter project.
 
