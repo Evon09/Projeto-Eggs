@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "430650451462",
-    "project_id": "projeto-eggs",
-    "storage_bucket": "projeto-eggs.appspot.com"
+    "project_number": "266173993687",
+    "project_id": "projeto-egg",
+    "storage_bucket": "projeto-egg.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:430650451462:android:14e8a1de9f1d4b7b900587",
+        "mobilesdk_app_id": "1:266173993687:android:b17be68b3e67f70903d692",
         "android_client_info": {
           "package_name": "com.example.desktopeggs"
         }
       },
       "oauth_client": [
         {
-          "client_id": "430650451462-kcjn4s6ffqorcpkgannar50hrn2tp3e5.apps.googleusercontent.com",
+          "client_id": "266173993687-88dt29m0344s6iat6rtf9u9qjhc7k728.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD-d_FXazpslX-r-xOd9diKVYV0flvb3SM"
+          "current_key": "AIzaSyDbP44XPoU7DFG7yHFCT1WXmETyBTDpGvA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "430650451462-kcjn4s6ffqorcpkgannar50hrn2tp3e5.apps.googleusercontent.com",
+              "client_id": "266173993687-88dt29m0344s6iat6rtf9u9qjhc7k728.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

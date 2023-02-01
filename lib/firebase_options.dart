@@ -27,15 +27,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return linux;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -44,39 +38,60 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDCnundA-1iR_NmjOtM6CN5BWCoJ4n6E8s',
-    appId: '1:430650451462:web:d2d6a1eb58244922900587',
-    messagingSenderId: '430650451462',
-    projectId: 'projeto-eggs',
-    authDomain: 'projeto-eggs.firebaseapp.com',
-    storageBucket: 'projeto-eggs.appspot.com',
+    apiKey: 'AIzaSyBqSLhJ2IUbAejHpTAob3YMe7lqbfPZfHw',
+    appId: '1:266173993687:web:ebbb57d623f5b75303d692',
+    messagingSenderId: '266173993687',
+    projectId: 'projeto-egg',
+    authDomain: 'projeto-egg.firebaseapp.com',
+    storageBucket: 'projeto-egg.appspot.com',
+    measurementId: 'G-XVY0LJB16L',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD-d_FXazpslX-r-xOd9diKVYV0flvb3SM',
-    appId: '1:430650451462:android:14e8a1de9f1d4b7b900587',
-    messagingSenderId: '430650451462',
-    projectId: 'projeto-eggs',
-    storageBucket: 'projeto-eggs.appspot.com',
+    apiKey: 'AIzaSyDbP44XPoU7DFG7yHFCT1WXmETyBTDpGvA',
+    appId: '1:266173993687:android:b17be68b3e67f70903d692',
+    messagingSenderId: '266173993687',
+    projectId: 'projeto-egg',
+    storageBucket: 'projeto-egg.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCRcFInoD6iTm8z_ZJwYcrq5Y_Sn9jFm5o',
-    appId: '1:430650451462:ios:46d301e04b10e927900587',
-    messagingSenderId: '430650451462',
-    projectId: 'projeto-eggs',
-    storageBucket: 'projeto-eggs.appspot.com',
-    iosClientId: '430650451462-uk2r951nbeigc077gakk1uura4n6pafr.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAE845SyWwR-1QqzTFnngDZeERtHxEgw34',
+    appId: '1:266173993687:ios:db61ba9175fd486f03d692',
+    messagingSenderId: '266173993687',
+    projectId: 'projeto-egg',
+    storageBucket: 'projeto-egg.appspot.com',
+    iosClientId: '266173993687-i07s19tls65b3skspsm5h099epf2l7h3.apps.googleusercontent.com',
     iosBundleId: 'com.example.desktopeggs',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCRcFInoD6iTm8z_ZJwYcrq5Y_Sn9jFm5o',
-    appId: '1:430650451462:ios:46d301e04b10e927900587',
-    messagingSenderId: '430650451462',
-    projectId: 'projeto-eggs',
-    storageBucket: 'projeto-eggs.appspot.com',
-    iosClientId: '430650451462-uk2r951nbeigc077gakk1uura4n6pafr.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAE845SyWwR-1QqzTFnngDZeERtHxEgw34',
+    appId: '1:266173993687:ios:db61ba9175fd486f03d692',
+    messagingSenderId: '266173993687',
+    projectId: 'projeto-egg',
+    storageBucket: 'projeto-egg.appspot.com',
+    iosClientId: '266173993687-i07s19tls65b3skspsm5h099epf2l7h3.apps.googleusercontent.com',
     iosBundleId: 'com.example.desktopeggs',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBqSLhJ2IUbAejHpTAob3YMe7lqbfPZfHw',
+    appId: '1:266173993687:web:efcead23c2adb96403d692',
+    messagingSenderId: '266173993687',
+    projectId: 'projeto-egg',
+    authDomain: 'projeto-egg.firebaseapp.com',
+    storageBucket: 'projeto-egg.appspot.com',
+    measurementId: 'G-GTQDCCC3TX',
+  );
+
+  static const FirebaseOptions linux = FirebaseOptions(
+    apiKey: 'AIzaSyBqSLhJ2IUbAejHpTAob3YMe7lqbfPZfHw',
+    appId: '1:266173993687:web:e26ee2e4ec04178e03d692',
+    messagingSenderId: '266173993687',
+    projectId: 'projeto-egg',
+    authDomain: 'projeto-egg.firebaseapp.com',
+    storageBucket: 'projeto-egg.appspot.com',
+    measurementId: 'G-RXTMCDEFH0',
   );
 }
