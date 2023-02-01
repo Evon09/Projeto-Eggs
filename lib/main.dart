@@ -5,13 +5,6 @@ import 'package:flutter/services.dart';
 import 'firebase_options.dart';
 import 'Auth/main_page.dart';
 
-
-
-
-
-
-
-
 Future<void> main() async {
   
   WidgetsFlutterBinding.ensureInitialized();
