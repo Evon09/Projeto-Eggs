@@ -5,13 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_options.dart';
 import 'Auth/main_page.dart';
 
-
-
-
-
-
-
-
 Future<void> main() async {
   
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,15 +21,19 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   // This widget is the root of your application.
   @override
-    Widget build(BuildContext context) {
-      SystemChrome.setSystemUIOverlayStyle(
-          const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-            SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-              return const MaterialApp(
-                home: MainPage(),
-              );
-              
+    
+    
+        return MaterialApp(
+       
+          home: MainPage(),
+        );
+    
    
+
   }
 }
