@@ -39,67 +39,110 @@ class _loginpageState extends State<loginpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffd63384),
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+      backgroundColor: Color.fromARGB(255,245,245,245),
+      body: Center(
+           
+
+            
+            child: Container( 
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Row(
+           
+              mainAxisAlignment: MainAxisAlignment.center,
               //Hello Again!
               
               children: [
 
-                Text(
-                "Hi there,",
-               
-                style: TextStyle(fontSize: 40, fontFamily: 'Open Sans', fontWeight: FontWeight.bold, color:Color(0xffffffff) ),
+                Expanded(
+                  child: 
+                  Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Solução para",
+                          style: TextStyle(fontSize: 40),
+                        ),
+                        Text(
+                          "Contagem de ovos",
+                          style: TextStyle(fontSize: 40),
+                        ),
+                      ],
+                    ),
+                    
+                    Container(
+                      
+                      height: 300,
+                      width: 300,
+                      color: Colors.grey,
+                      child: Center(child: Text("Logo ou algo do tipo"),),
+                    )
+                    
+                  
+
+                  ],
                 ),
-                Text(
-                "I'm FarmDash",
-               
-                style: TextStyle(fontSize: 40, fontFamily: 'Open Sans', fontWeight: FontWeight.bold, color:Color(0xffffffff) ),
+                 
                 ),
-                SizedBox(height: 0),
-                Text(
-                  "",
-                  style: TextStyle(
-                    fontSize: 18,
-                    //fontFamily: 'Raleway',
-                  ),
-                ),
-                Text(
-                "Your Dashboard to sítio urbano",
-               
-                style: TextStyle(fontSize: 20, fontFamily: 'Open Sans', color:Color(0xffffffff) ),
-                ),
-                //SizedBox(height: 0),
-                SizedBox(height: 30),
 
 
+
+
+
+                Expanded(
+                  child: 
+                  Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                   Container(
+                    height: 500,
+                    width: 400,
+                    color: Colors.grey,
+                    child: 
+                    Center(
+                      child: Text("Ilustraçao generica"),
+                       ),
+                   )
+
+                  ],
+                ),
+                 
+                ),
                 
-                //email text
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+               
+
+                Expanded(
+                  child: 
+                
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    
+                   
+                    Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: TextField(
                       controller: _emailcontroller,
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.email),
 	                        hintStyle: TextStyle(color: Colors.grey),  
                           enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Color(0xffd688b0)),
+                              borderSide: BorderSide(color: Color.fromARGB(255, 150, 136, 214)),
                               borderRadius: BorderRadius.circular(12)),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Color(0xffd688b0)),
+                              borderSide: BorderSide(color: Color.fromARGB(255, 141, 136, 214)),
                               borderRadius: BorderRadius.circular(12)),
                           labelText: "Email",
-                          fillColor: Colors.white,
+                          fillColor: Color.fromARGB(255,236,239,241),
                           filled: true)),
                 ),
                 SizedBox(height: 10),
                 
                 //password text
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: TextField(
                       obscureText: _isHidden,
                       controller: _passwordcontroller,
@@ -107,17 +150,17 @@ class _loginpageState extends State<loginpage> {
                           prefixIcon: Icon(Icons.key_sharp),
 	                        hintStyle: TextStyle(color: Colors.grey),  
                           enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Color(0xffd688b0)),
+                              borderSide: BorderSide(color: Color.fromARGB(255, 150, 136, 214)),
                               borderRadius: BorderRadius.circular(12)),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Color(0xffd688b0)),
+                              borderSide: BorderSide(color: Color.fromARGB(255, 141, 136, 214)),
                               borderRadius: BorderRadius.circular(12)),
                           labelText: "Password",
                           suffix: InkWell(
                              onTap: _togglePasswordView,
                              child: Icon( Icons.visibility),
                 ),
-                          fillColor: Colors.white,
+                          fillColor: Color.fromARGB(255,236,239,241),
                           filled: true)
                           
                           ),
@@ -132,9 +175,9 @@ class _loginpageState extends State<loginpage> {
 
                 
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 45),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       GestureDetector(
                         onTap: () {
@@ -150,7 +193,7 @@ class _loginpageState extends State<loginpage> {
                         child: Text("Forgot password?",
                             style: TextStyle(
                                 
-                                color: Colors.white,
+                                color: Colors.grey,
                                 fontWeight: FontWeight.bold)),
                       ),
                     ],
@@ -161,32 +204,41 @@ class _loginpageState extends State<loginpage> {
                 SizedBox(height: 40),
 
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: GestureDetector(
                     onTap: signIn,
                     child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Color(0xffffffff),
+                              boxShadow: [
+                              BoxShadow(
+                                color: Color.fromARGB(113, 134, 103, 218),
+                                blurRadius: 15.0,
+                                spreadRadius: 5.0,
+                                offset: Offset(0.0, 0.0),
+                              ),
+                            ],
+                            color: Color.fromARGB(255, 128, 98, 212),
                             borderRadius: BorderRadius.circular(12)),
                         child: Center(
                             child: Text(
                           "Sign In",
                           style: TextStyle(
-                              color: Color(0xffd63384),
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 20),
                         ))),
                   ),
                 ),
-                
-                SizedBox(height: 20),
-             
+         
+
+                  ],
+                ),
+                ),
               ],
             ),
           ),
         ),
-      ),
     );
   }
 

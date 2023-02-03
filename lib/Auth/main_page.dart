@@ -1,3 +1,7 @@
+import 'package:desktopeggs/Pages/forgot_pw_page.dart';
+import 'package:desktopeggs/Pages/login_page.dart';
+import 'package:desktopeggs/main.dart';
+
 import '/Auth/auth_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +17,7 @@ class MainPage extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return  MyNevBar();
+            return  forgotpasswordPage();
           } else {
             return  AuthPage();
           }
