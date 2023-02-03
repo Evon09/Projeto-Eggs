@@ -1,3 +1,4 @@
+import 'package:desktopeggs/Pages/dashboard.dart';
 import 'package:desktopeggs/Pages/forgot_pw_page.dart';
 import 'package:desktopeggs/Pages/login_page.dart';
 import 'package:desktopeggs/main.dart';
@@ -17,7 +18,7 @@ class MainPage extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return  forgotpasswordPage();
+            return  MainView();
           } else {
             return  AuthPage();
           }

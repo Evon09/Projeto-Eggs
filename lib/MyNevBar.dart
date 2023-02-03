@@ -1,86 +1,73 @@
-
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:desktopeggs/Pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:side_navigation/side_navigation.dart';
+import './Pages/dashboard.dart';
 
+class MainView extends StatefulWidget {
+  const MainView({Key? key}) : super(key: key);
 
-
-class MyNevBar extends StatefulWidget {
   @override
-  _MyNevBarState createState() => _MyNevBarState();
+  _MainViewState createState() => _MainViewState();
 }
 
-class _MyNevBarState extends State<MyNevBar>
-{
-  final user = FirebaseAuth.instance.currentUser!;
-  int currentIndex = 0;
+class _MainViewState extends State<MainView> {
+  /// Views to display
+ 
+  final List<Widget> views =  [
+  
+    Dashboard(),
 
-  final List<Widget> _telas = [
-
+    Center(
+      child: Text('Account'),
+    ),
+    Center(
+      child: Text('Settings'),
+    ),
   ];
+
+  /// The currently selected index of the bar
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-                     floatingActionButton: FloatingActionButton(
-                 onPressed: () {
-                    FirebaseAuth.instance.signOut();
-                 },
-              child: Icon(Icons.logout_rounded),
-              backgroundColor: Color(0xffd688b0),
-              ),
-      body: _telas[currentIndex],
+      /// You can use an AppBar if you want to
+      //appBar: AppBar(
+      //  title: const Text('App'),
+      //),
 
-      bottomNavigationBar: BottomNavyBar(
-        selectedIndex: currentIndex,
-        onItemSelected: (index){
-          setState(() {
-            currentIndex = index;
-          });
-        },
-        items: <BottomNavyBarItem>[
-          BottomNavyBarItem(
-            icon: Icon(Icons.videocam),
-            title: Text('Live'),
-            activeColor: Color(0xffd688b0),
-            inactiveColor: Color(0xFF448AFF),
+      // The row is needed to display the current view
+      body: Row(
+        children: [
+          /// Pretty similar to the BottomNavigationBar!
+          SideNavigationBar(
+            selectedIndex: selectedIndex,
+            items: const [
+              SideNavigationBarItem(
+                icon: Icons.dashboard,
+                label: 'Dashboard',
+              ),
+              SideNavigationBarItem(
+                icon: Icons.person,
+                label: 'Account',
+              ),
+              SideNavigationBarItem(
+                icon: Icons.settings,
+                label: 'Settings',
+              ),
+            ],
+            onTap: (index) {
+              setState(() {
+                selectedIndex = index;
+              });
+            },
           ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.show_chart),
-            title: Text('Temp'),
-            activeColor: Color(0xffd688b0),
-            inactiveColor: Color(0xFF448AFF),
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.show_chart),
-            title: Text('Hum'),
-            activeColor: Color(0xffd688b0),
-            inactiveColor: Color(0xFF448AFF),
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.show_chart),
-            title: Text('Ph'),
-            activeColor: Color(0xffd688b0),
-            inactiveColor: Color(0xFF448AFF),
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.show_chart),
-            title: Text('Tds'),
-            activeColor: Color(0xffd688b0),
-            inactiveColor: Color(0xFF448AFF),
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.show_chart),
-            title: Text('Lum'),
-            activeColor: Color(0xffd688b0),
-            inactiveColor: Color(0xFF448AFF),
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.show_chart),
-            title: Text('CO2'),
-            activeColor: Color(0xffd688b0),
-            inactiveColor: Color(0xFF448AFF),
-          ),
-          
+
+          /// Make it take the rest of the available width
+          Expanded(
+            child: views.elementAt(selectedIndex),
+          )
         ],
       ),
     );

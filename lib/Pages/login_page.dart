@@ -45,17 +45,21 @@ class _loginpageState extends State<loginpage> {
 
             
             child: Container( 
-              padding: const EdgeInsets.symmetric(horizontal: 40),
+              // padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Row(
            
               mainAxisAlignment: MainAxisAlignment.center,
               //Hello Again!
               
               children: [
-
                 Expanded(
+                  
+                  child: 
+                Container(
+                  color: Color.fromARGB(255,53, 83, 127),
                   child: 
                   Column(
+                  
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
@@ -77,7 +81,9 @@ class _loginpageState extends State<loginpage> {
                       height: 300,
                       width: 300,
                       color: Colors.grey,
-                      child: Center(child: Text("Logo ou algo do tipo"),),
+                      child: Center(child: Image(
+                        image: AssetImage("assets/ovo.png"),
+                      ),),
                     )
                     
                   
@@ -86,30 +92,13 @@ class _loginpageState extends State<loginpage> {
                 ),
                  
                 ),
-
-
-
-
-
-                Expanded(
-                  child: 
-                  Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                   Container(
-                    height: 500,
-                    width: 400,
-                    color: Colors.grey,
-                    child: 
-                    Center(
-                      child: Text("Ilustraçao generica"),
-                       ),
-                   )
-
-                  ],
                 ),
-                 
-                ),
+
+
+
+
+
+                
                 
                
 
@@ -212,13 +201,13 @@ class _loginpageState extends State<loginpage> {
                         decoration: BoxDecoration(
                               boxShadow: [
                               BoxShadow(
-                                color: Color.fromARGB(113, 134, 103, 218),
+                                color: Color.fromARGB(113,53, 83, 127),
                                 blurRadius: 15.0,
                                 spreadRadius: 5.0,
                                 offset: Offset(0.0, 0.0),
                               ),
                             ],
-                            color: Color.fromARGB(255, 128, 98, 212),
+                            color: Color.fromARGB(255,53, 83, 127),
                             borderRadius: BorderRadius.circular(12)),
                         child: Center(
                             child: Text(
