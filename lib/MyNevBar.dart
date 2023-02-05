@@ -38,6 +38,7 @@ class _MainViewState extends State<MainView> {
       //),
 
       // The row is needed to display the current view
+      backgroundColor: Color.fromARGB(255,53, 83, 127),
       body: Row(
         children: [
           /// Pretty similar to the BottomNavigationBar!
