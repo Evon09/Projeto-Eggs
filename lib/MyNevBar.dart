@@ -1,8 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:desktopeggs/Pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:side_navigation/side_navigation.dart';
 import './Pages/dashboard.dart';
+
+
+FirebaseAuth auth = FirebaseAuth.instance;
+signOut() async {
+    await auth.signOut();
+  }
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -36,9 +43,15 @@ class _MainViewState extends State<MainView> {
       //appBar: AppBar(
       //  title: const Text('App'),
       //),
-
+        floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xFF35537F),
+        child: Icon(Icons.logout),
+        onPressed: () {
+          FirebaseAuth.instance.signOut();
+        },
+      ),
       // The row is needed to display the current view
-      backgroundColor: Color.fromARGB(255,53, 83, 127),
+      backgroundColor: Color(0xFF35537F),
       body: Row(
         children: [
           /// Pretty similar to the BottomNavigationBar!
@@ -58,13 +71,11 @@ class _MainViewState extends State<MainView> {
                 label: 'Settings',
               ),
             ],
-            onTap: (index) {
-              setState(() {
+            onTap: (index) {setState(() {
                 selectedIndex = index;
               });
-            },
+            }
           ),
-
           /// Make it take the rest of the available width
           Expanded(
             child: views.elementAt(selectedIndex),
